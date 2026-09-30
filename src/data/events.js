@@ -35,7 +35,7 @@
 // NEXT: Step 6 is in src/pages/Events.jsx
 // ============================================================
 
-export default events = [
+const events = [
     {
         id:1,
         title: "Afrochella",
@@ -83,3 +83,5 @@ export default events = [
         description: "Join the Cape Coast Carnival for a lively celebration of music, dance, and local traditions in the historic city of Cape Coast."
     }
 ]
+
+export default events;
