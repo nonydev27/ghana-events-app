@@ -34,3 +34,52 @@
 //
 // NEXT: Step 6 is in src/pages/Events.jsx
 // ============================================================
+
+export default events = [
+    {
+        id:1,
+        title: "Afrochella",
+        date: "2026-12-20",
+        location: "Accra",
+        category: "Music",
+        price: "GHS 150",
+        description: "Afrochella is a vibrant music festival celebrating African culture, music, and art. Join us for an unforgettable experience!"
+    },
+    {
+        id:2,
+        title: "Chale Wote Street Art Festival",
+        date: "2026-08-15",
+        location: "Accra",
+        category: "Art",
+        price: "Free",
+        description: "Chale Wote is an annual street art festival that transforms the streets of Accra into a canvas for artists from around the world."
+    },
+
+    {
+        id:3,
+        title: "Accra Food Festival",
+        date: "2026-09-10",
+        location: "Accra",
+        category: "Food",
+        price: "GHS 50",
+        description: "The Accra Food Festival is a culinary celebration featuring local and international cuisines, cooking demonstrations, and food competitions."
+    },
+    {
+        id:4,
+        title: "Kumasi Cultural Festival",
+        date: "2026-11-05",
+        location: "Kumasi",
+        category: "Culture",
+        price: "GHS 30",
+        description: "Experience the rich cultural heritage of Kumasi at the Kumasi Cultural Festival, with traditional music, dance, and crafts."
+    },
+    {
+        id:5,
+        title: "Cape Coast Carnival",
+        date: "2026-10-25",
+        location: "Cape Coast",
+        category: "Festival",
+        price: "GHS 100",
+        description: "Join the Cape Coast Carnival for a lively celebration of music, dance, and local traditions in the historic city of Cape Coast."
+    }
+]
