@@ -10,6 +10,19 @@
 //   instantly with no reload. It works like <a>, but you write
 //   to="/about" instead of href="/about".
 //
+import {NavLink} from "react-router";
+
+export default function Navbar() {
+  return (
+    <nav>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/about">About</NavLink>
+      <NavLink to="/events">Events</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
+    </nav>
+  )
+}
+
 // WHAT TO DO:
 //   1. Import NavLink from "react-router".
 //
