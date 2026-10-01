@@ -44,7 +44,7 @@
                 <label htmlFor="message">Message:</label>
                 <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
 
-                <button type="submit" value={submitted} onChange={(e) => setSubmitted(e.target.value)}>Send</button>
+                <button type="submit">Send</button>
             </form>
             </>
         )

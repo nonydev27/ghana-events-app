@@ -38,7 +38,7 @@
             <>
                 <h1>{event.title}</h1>
                 <p>{event.date} in {event.location}</p>
-                <p>Price: ${event.price}</p>
+                <p>Price: {event.price}</p>
                 <p>{event.description}</p>
                 <Link to="/events">Back to events</Link>
             </>

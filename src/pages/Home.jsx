@@ -37,7 +37,7 @@ export default function Home() {
             <p>Your one-stop destination for all Ghanaian events!</p>
 
             <h2>Go to Events</h2>
-            <button><Link to="/events">Browse events</Link></button>
+            <Link to="/events">Browse events</Link>
         </>
     )
 }
