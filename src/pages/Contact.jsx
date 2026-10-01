@@ -32,6 +32,8 @@
     }
         return(
             <>
+
+            {submitted && <p>Thanks! We'll get back to you soon.</p>}
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:</label>
                 <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />

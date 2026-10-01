@@ -45,6 +45,8 @@ import About from "./pages/About.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Events from "./pages/Events.jsx";
 import EventDetails from "./pages/EventDetails.jsx";
+import Contact from "./pages/Contact.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
 
@@ -56,6 +58,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetails />} />
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </>
   )

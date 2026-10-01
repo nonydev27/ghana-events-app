@@ -25,3 +25,16 @@
 //   - making a reusable EventCard component with "props"
 //   - adding a search box to the Events page
 // ============================================================
+
+//adding 404 page to show that the user is out of bounds of the website.
+import {Link} from "react-router";
+
+export default function NotFound() {
+
+    return(
+        <>
+            <h1> Page 404</h1>
+            <p> Sorry but this page does not exist. Kindly go back <span><Link to="/">home</Link></span></p>
+        </>
+    )
+}
