@@ -15,7 +15,39 @@
 //   3. Connect it: add a Route for "/contact" in App.jsx and a
 //      NavLink in Navbar.jsx.
 //   CHECK: the form shows up, and you can type in it.
-//
+
+    import {useState} from "react";
+  
+    export default function Contact(){
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [submitted, setSubmitted] = useState(false);
+
+        
+    function handleSubmit(e){
+        e.preventDefault();
+        setSubmitted(true);
+    }
+        return(
+            <>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="name">Name:</label>
+                <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+
+                <label htmlFor="email">Email:</label>
+                <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+                <label htmlFor="message">Message:</label>
+                <textarea id="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+
+                <button type="submit" value={submitted} onChange={(e) => setSubmitted(e.target.value)}>Send</button>
+            </form>
+            </>
+        )
+    }
+
 // ---------- PART B: make it work (new idea: state) ----------
 // QUICK LESSON: What is state?
 //   State is a variable that React REMEMBERS, and when it changes,

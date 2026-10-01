@@ -19,6 +19,21 @@
 //   1. Import your events list: import events from "../data/events.js"
 //      (The ../ means "go up one folder", from pages/ to src/.)
 //
+import events from "../data/events.js"
+
+export default function Events() {
+    return(
+        <>
+        <h1>Upcoming Events</h1>
+        {events.map((e) => (
+            <div key={e.id}>
+                <h2>{e.title}</h2>
+                <p>{e.date} in {e.location}</p>
+            </div>
+        ))}
+        </>
+    )
+}
 //   2. Make a component called Events with "export default".
 //
 //   3. In the return, add an <h1> like "Upcoming Events".
