@@ -1,16 +1,41 @@
-//added navbar.jsx file to src/components folder
-//the navbar contains class names for styling and links to the different pages of the app. It uses NavLink from react-router to create the links. The active link is highlighted with a different color. The navbar is exported as a default function so it can be imported and used in other files.
-//the navbar is imported and used in the App.jsx file. It is placed above the Routes component so it is always visible on the page. The navbar is styled with Tailwind CSS classes. The navbar is responsive and collapses into a hamburger menu on smaller screens. The navbar is also accessible and can be navigated using the keyboard. The navbar is tested and works as expected.
 import {NavLink} from "react-router";
+import FlagStripe from "./FlagStripe.jsx";
+
+// The links live in an array, so I can .map() over them
+// and write the long className only ONCE.
+const links = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/events", label: "Events" },
+    { to: "/contact", label: "Contact" },
+];
 
 export default function Navbar() {
-  return (
-    <nav className="gap-4 bg-ghana-red space-x-10 font-bold justify-content text-center justify p-4 sticky top-0 z-50">
-      <NavLink className="text-white hover:text-ghana-gold transition ease-in-out duration-300 active:text-ghana-gold focus:text-ghana-gold" to="/">Home</NavLink>
-      <NavLink className="text-white hover:text-ghana-gold transition ease-in-out duration-300 active:text-ghana-gold focus:text-ghana-gold" to="/about">About</NavLink>
-      <NavLink className="text-white hover:text-ghana-gold transition ease-in-out duration-300 active:text-ghana-gold focus:text-ghana-gold" to="/events">Events</NavLink>
-      <NavLink className="text-white hover:text-ghana-gold transition ease-in-out duration-300 active:text-ghana-gold focus:text-ghana-gold" to="/contact">Contact</NavLink>
-    </nav>
-  )
-}
+    return (
+        <header className="sticky top-0 z-50">
+            <nav className="bg-ghana-red flex flex-wrap items-center justify-between gap-4 px-6 py-4">
+                {/* Site name on the left */}
+                <NavLink to="/" className="font-display text-2xl text-ghana-gold">
+                    Ghana Events
+                </NavLink>
 
+                {/* Page links on the right */}
+                <div className="flex gap-6 font-bold">
+                    {links.map((link) => (
+                        <NavLink
+                            key={link.to}
+                            to={link.to}
+                            // "end" stops Home from looking active on every page
+                            end={link.to === "/"}
+                            // [&.active] = style the link for the page you're on, the one you will see
+                            className="text-white hover:text-ghana-gold transition-colors duration-300 [&.active]:text-ghana-gold [&.active]:underline underline-offset-8"
+                        >
+                            {link.label}
+                        </NavLink>
+                    ))}
+                </div>
+            </nav>
+            <FlagStripe />
+        </header>
+    )
+}
