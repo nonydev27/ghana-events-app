@@ -25,3 +25,7 @@
     font-family: var(--font-display);
   }
 }
+
+.link{
+  @apply bg-ghana-red text-white hover:bg-ghana-gold py-2 px-4 rounded;
+}
