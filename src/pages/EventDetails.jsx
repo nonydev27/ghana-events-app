@@ -22,7 +22,7 @@
                 <p>{event.date} in {event.location}</p>
                 <p>Price: {event.price}</p>
                 <p>{event.description}</p>
-                <Link to="/events">Back to events</Link>
+                <Link className="link" to="/events">Back to events</Link>
             </>
         )
     }
